@@ -21,7 +21,6 @@ def verify_token(token):
     )
     return response.status_code == 200
 
-# Новый метод для просмотра заказа
 @app.route('/orders/<int:order_id>', methods=['GET'])
 def get_order(order_id):
     token = request.headers.get('Authorization')
